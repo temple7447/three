@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/watch.css">
+    <link rel="stylesheet" href="/css/watch.css">
+</head>
+<body>
+    <div class="navbar" >
+        <div class="container">
+            <a href="#" style="text-decoration: none;" class="logo">Remember<span class="that">That</span></a>
+
+                <img id="mobile-cta" onclick="open()" style="height: 20px; width: 20px;" class="mobile-menu" src="/image/togglebar.png" alt="toggle" >
+
+
+
+            <nav class="nav-mobile">
+                <img src="/image/exit.png" onclick="close()" style="height: 27px; width: 27px;"  alt="mobile-exit" id="mobile-exit" class="mobile-exit">
+                <ul class="primary-nav">
+                    <a href="#"><li class="active">HOME</li></a>
+                    <a href="#"><li>SERVICES</li></a>
+                    <a href="#"><li>ABOUT</li></a>
+                </ul>
+
+                <ul class="secondary-nav ">
+                    <a href="#"><li>HOME</li></a>
+                    <a href="#"><li>SERVICES</li></a>
+                    <a href="#"><li>ABOUT</li></a>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+<button onclick="changecolor()" style="color: wheat;padding: 20px;">ok world</button>
+
+<script>
+    //opening btn
+    const mobilebtn = document.querySelector('.mobile-menu')
+    
+    //closing btn
+    const navexit = document.querySelector('.mobile-exit')
+    //navigation bar for mob
+    const navbar = document.querySelector('.nav-mobile')
+        // document.querySelector('body').addEventListener('click',()=>{
+        //     // navbar.style.display = 'none'
+        // })
+
+        function changecolor(){
+            document.querySelector('.navbar').classList.add('menu-opn')
+        }
+        function open(){
+            navbar.classList.add('menu-open')
+        }
+        function close(){
+            // navbar.classList.remove('menu-open') 
+            navbar.style.display = 'none'
+        }
+
+
+
+</script>
+ 
+ 
+
+
+
+
+
+
+
+
+
+</body>
+</html>

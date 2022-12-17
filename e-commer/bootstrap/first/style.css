@@ -1,0 +1,10 @@
+body{
+    background-color: darkslategrey
+}
+
+@media(min-width:768px)
+{
+    .new-form{
+        width: 70%;
+    }
+}

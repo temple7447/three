@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .loader--hidden{
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: darkgray;
+            transition: opacity 0.75s, visibility 0.75s;
+        }
+        .loader::after{
+            content: "";
+            width: 75px;
+            height: 75px;
+            border: 15px solid gray;
+            border-top-color: greenyellow;
+            border-radius: 50%;
+            animation: loading 0.75s ease infinite;
+        }
+        @keyframes loading{
+            from{ transform: rotate(0turn);}
+            to{
+                transform: rotate(1turn);
+            }
+        }
+    </style>
+    <script>
+        const loader = document.querySelector('.loader');
+        // const dbody = document.querySelector('.dbody')
+
+        document.addEventListener('load',()=>{
+            loader.classList.add('loader--hidden');
+        })
+    </script>
+</head>
+<body>
+    <div class="loader "></div>
+    <h1>you are welcome</h1>
+</body>
+</html>

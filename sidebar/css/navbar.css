@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+}
+.navul_main{
+    display: flex;
+    padding: 10px;
+    width: 70%;
+    margin-left: 20%;
+flex-direction: row;
+align-items: center;
+justify-content:space-around;
+    
+}
+.toggle{
+    display: none;
+}
+li{
+    list-style: none;
+}
+.navul_main li{
+    display: flex;
+    justify-content:space-around;
+    align-content: space-between;
+    background-color: rgb(54, 46, 46);
+    font-size: 20px;
+    color: white;
+    width: 120px;
+    border-radius: 8px;
+    font-weight: 500;
+    margin: 15px;
+    padding: 15px;
+
+    
+}
+a{
+    text-decoration: none;
+}
+
+.active , .navul_main li:hover{
+    background-color: rgb(16, 37, 37);
+}
+.submain1{
+    display: none;
+}
+
+.navul_main li:hover .submain1{
+    display: block;
+    position: absolute;
+    margin-top: 37px;
+    background-color: rgb(35, 26, 43);
+    margin-left: 27px;
+
+}
+.submain11{
+    display: block;
+    margin: 10px;
+}
+.submain11 li{
+    width:150px;
+    padding: 10px;
+    border-bottom: 1px solid white;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.submain11 li:last-child{
+border-bottom: none;
+}
+.submain11 li:hover{
+    background-color: fuchsia;
+}
+.submain2{
+    display: none;
+}
+.submain11 li:hover .submain2{
+   display:block;
+   position: absolute;
+   margin-top: -15px;
+   margin-right:-330px;
+   background-color: green;
+}
+
+
+
+@media (max-width:748px){
+    body{
+        background-color: darkslategray;
+
+    }
+    .main{
+        display: none;
+    }
+    .toggle{
+        position: relative;
+        width: 100%;
+        display: block;
+    }
+
+  
+    .sidebar .toggle-btn{
+        position: absolute;
+        top:30px ;
+        left: 330px;
+    }
+    hr{
+        width: 30px;
+        justify-content: center;
+        margin-top: 7px;
+        margin-left: 6px;
+    }
+    .open{
+        color: white;
+        line-height: 2px;
+        background-color: black;
+        width: 40px;
+        justify-content: center;
+        height: 30px;
+        position: relative;
+        /* transition: open 2s linear; */
+    }
+    /* @keyframes open {
+        0%{
+            transform: scale(2);
+        }
+        100%{
+            transform: scale(4);
+        }
+        
+    } */
+    .close{
+        position: absolute;
+        margin-top: 20px;
+        left:90% ;
+        transition: 50s;
+    
+    }
+    .navul_main{
+        display: block;
+    flex-direction: column;
+    background-color: green;
+    width: 100%;
+    margin-left: 0;
+        
+    }
+    .navul_main li{
+       /* background-color: rgb(54, 46, 46); */
+        font-size: 12px;
+        color: white;
+        width: 120px;
+        border-radius:none;
+        font-weight: 500;
+        margin: 15px;
+        padding: 15px;
+    
+        
+    }
+    .navul_main li:hover .submain1{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        margin-top: -15px;
+        background-color: rgb(35, 26, 43);
+        margin-left: 250px;
+    
+    }
+    .submain11 li:hover .submain2{
+        display:block;
+        position: absolute;
+        margin-top: -15px;
+        margin-right:-250px;
+        background-color: green;
+     }
+   
+}
+
+
+
+
